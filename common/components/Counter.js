@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react'
+import BaseEnhancer, { ExtraEnhancer } from '../containers/base-enhancer';
 
 const Counter = ({increment, incrementIfOdd, incrementAsync, decrement, counter}) => (
   <p>
@@ -22,4 +23,5 @@ Counter.propTypes = {
   counter: PropTypes.number.isRequired
 }
 
-export default Counter
+
+export default ExtraEnhancer(BaseEnhancer(Counter));
